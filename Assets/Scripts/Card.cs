@@ -7,31 +7,33 @@ using UnityEngine.InputSystem.Utilities;
 public class Card : MonoBehaviour
 {
 
-    [SerializeField] List<string> keys = new List<string>();
-    Queue<string> testingKeys = new Queue<string>();
-    bool isKey;
+    [SerializeField] List<KeyCode> keys = new List<KeyCode>();
+    Queue<KeyCode> testingKeys = new Queue<KeyCode>();
 
-    void Start()
+    public void Init()
     {
         testingKeys.Clear();
-        foreach (string item in keys)
+        foreach (KeyCode item in keys)
         {
             testingKeys.Enqueue(item);
         }
+    }
+
+    public void Begin()
+    {
         StartCoroutine(WaitForKey());
     }
     
-    void GetKey(string key)
+    void TestKey()
     {
-        Debug.Log(key);
-        if (key == testingKeys.Peek())
+        if (Input.GetKeyDown(testingKeys.Peek()))
         {
             testingKeys.Dequeue();
         }
         else
         {
             testingKeys.Clear();
-            foreach (string item in keys)
+            foreach (KeyCode item in keys)
             {
                 testingKeys.Enqueue(item);
             }
@@ -45,12 +47,11 @@ public class Card : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                InputSystem.onAnyButtonPress.CallOnce(ctrl => GetKey(ctrl.name));
+                TestKey();
             }
             yield return null;
         }
 
         Debug.Log("Win");
     }
-
 }
