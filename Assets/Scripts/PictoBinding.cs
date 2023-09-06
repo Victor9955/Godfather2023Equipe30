@@ -24,13 +24,13 @@ public class PictoBinding : ScriptableObject
         return random;
     }
 
-    public List<KeyBinding> ResetList()
-    {
+    //public List<KeyBinding> ResetList()
+    //{
 
-    }
+    //}
 
-    public List<KeyBinding> GetNextList()
-    {
+    //public List<KeyBinding> GetNextList()
+    //{
 
-    }
+    //}
 }
