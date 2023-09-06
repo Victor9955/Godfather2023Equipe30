@@ -1,50 +1,42 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using static UnityEngine.InputManagerEntry;
 
 public class Card : MonoBehaviour
 {
-
-    List<KeyCode> keys = new List<KeyCode>();
+    public List<Key> keys;
     Queue<KeyCode> testingKeys = new Queue<KeyCode>();
     [SerializeField] PictoBinding bind;
-
-    [SerializeField] int debugRandomAmount = 6;
-
-    [Button]
-    void DebugRandom()
-    {
-        keys.Clear();
-        List<KeyBinding> randomList = bind.GetRandomList(debugRandomAmount);
-        foreach (KeyBinding item in randomList)
-        {
-            keys.Add(item.keyCode);
-        }
-    }
-
-    [Button]
+    
     public void Init()
     {
-        testingKeys.Clear();
-        foreach (KeyCode item in keys)
+        List<KeyBinding> random = bind.bindings.OrderBy(x => Random.value).ToList();
+
+        for (int i = 0; i < keys.Count - 1; i++)
         {
-            testingKeys.Enqueue(item);
+            keys[i].key = random[i];
+        }
+
+        foreach (var item in keys)
+        {
+            item.Init();
+        }
+
+        testingKeys.Clear();
+        foreach (Key item in keys)
+        {
+            testingKeys.Enqueue(item.key.keyCode);
         }
     }
 
-    [Button]
     public void Begin()
     {
         StartCoroutine(WaitForKey());
-    }
-
-    private void Start()
-    {
-        Init();
-        Begin();
     }
 
     void TestKey()
@@ -57,9 +49,9 @@ public class Card : MonoBehaviour
         else
         {
             testingKeys.Clear();
-            foreach (KeyCode item in keys)
+            foreach (Key item in keys)
             {
-                testingKeys.Enqueue(item);
+                testingKeys.Enqueue(item.key.keyCode);
             }
             Debug.Log("Retry");
         }
@@ -76,6 +68,6 @@ public class Card : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("Win");
+        Debug.Log("WinCard");
     }
 }
