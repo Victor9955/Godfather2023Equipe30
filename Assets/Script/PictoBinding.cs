@@ -16,21 +16,4 @@ public struct KeyBinding
 public class PictoBinding : ScriptableObject
 {
     public List<KeyBinding> bindings = new List<KeyBinding>();
-
-    public List<KeyBinding> GetRandomList(int amount)
-    {
-        List<KeyBinding> random = bindings.OrderBy(x => UnityEngine.Random.value).ToList();
-        random.RemoveRange(0, 24 - amount);
-        return random;
-    }
-
-    public List<KeyBinding> ResetList()
-    {
-
-    }
-
-    public List<KeyBinding> GetNextList()
-    {
-
-    }
 }
