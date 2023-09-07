@@ -56,7 +56,7 @@ public class Display : MonoBehaviour
             item.SetActive(false);
         }
         gameEvents.WinCardInvoke();
-        Debug.Log("WinCard");
+        //Debug.Log("WinCard");
     }
 
     void TestKey()
@@ -65,7 +65,7 @@ public class Display : MonoBehaviour
         {
             showKeysGrid[keys.IndexOf(testingKeys.Peek())].GetComponent<SpriteRenderer>().sprite = testingKeys.Peek().sprite;
             testingKeys.Dequeue();
-            Debug.Log("Good");
+            //Debug.Log("Good");
         }
         else
         {
@@ -76,7 +76,7 @@ public class Display : MonoBehaviour
                 testingKeys.Enqueue(item);
             }
             gameEvents.WrongInputInvoke();
-            Debug.Log("Retry");
+            //Debug.Log("Retry");
         }
     }
 
