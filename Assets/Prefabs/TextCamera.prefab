@@ -5134,7 +5134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5081819281489036540}
   - component: {fileID: 6010675862079289032}
-  - component: {fileID: 3768627341511650696}
   - component: {fileID: 2262574032770749514}
   m_Layer: 0
   m_Name: TextCamera
@@ -5151,7 +5150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7935369798062754767}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -916, y: -86, z: 0.017211914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5211,14 +5210,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3768627341511650696
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7935369798062754767}
-  m_Enabled: 1
 --- !u!114 &2262574032770749514
 MonoBehaviour:
   m_ObjectHideFlags: 0

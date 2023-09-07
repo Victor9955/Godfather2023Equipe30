@@ -67,7 +67,7 @@ public class MenuManager : MonoBehaviour
 
     public void Validate(InputAction.CallbackContext ctx) //Unity Input Call
     {
-        if (!inCredit)
+        if (!inCredit && GameManager.GameState == GameManager.gameStateList.MainMenu)
         {
             switch (buttonSelected)
             {
@@ -82,7 +82,7 @@ public class MenuManager : MonoBehaviour
                     return;
             }
         }
-        else
+        else if (GameManager.GameState == GameManager.gameStateList.MainMenu)
             HideCredit();
     }
 
