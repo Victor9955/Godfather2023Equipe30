@@ -17,27 +17,30 @@ public class CardSpawner : MonoBehaviour
     [Button]
     void SpawnCard()
     {
-        current = Instantiate(forms[0], posForm);
+        current = Instantiate(forms[GetRandom()], posForm);
         Card card = current.GetComponent<Card>();
         card.Init();
         read.Show(card.keys);
         card.Begin();
     }
 
-
+    [Button]
     int GetRandom()
     {
-        List<int> random = new List<int>();
-        for (int i = 0; i < forms.Count - 1; i++)
+        if(forms.Count > 1)
         {
-            random.Add(i);
+            int result = last;
+            while (result == last)
+            {
+                result = Random.Range(0, forms.Count); ;
+            }
+            last = result;
         }
-        if(last >= 0)
+        else
         {
-            random.Remove(last);
+            last = 0;
         }
-        Debug.Log(random);
-        last = random.ElementAt(Random.Range(0, random.Count));
+        //Debug.Log(last);
         return last;
     }
 }
