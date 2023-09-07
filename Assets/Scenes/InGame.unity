@@ -2137,6 +2137,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7763273684015199644, guid: 4964b872cc47f7c4d91886e54fb313ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763273684015199644, guid: 4964b872cc47f7c4d91886e54fb313ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.97
+      objectReference: {fileID: 0}
     - target: {fileID: 8396913145491970563, guid: 4964b872cc47f7c4d91886e54fb313ab, type: 3}
       propertyPath: TempCardStock
       value: 
