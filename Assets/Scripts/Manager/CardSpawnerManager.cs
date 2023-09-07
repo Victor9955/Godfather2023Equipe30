@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CardSpawnerManager : MonoBehaviour
 {
     private GameManager gameManager;
+    [SerializeField] ScoreSystem score;
 
     private int timePassed;
     public int TimePassed
@@ -57,6 +59,7 @@ public class CardSpawnerManager : MonoBehaviour
     public void AddPoint()
     {
         //(Score Card * current Time) / Temps Max
+        score.SetAddScore(GameManager.score, (gameManager.CardScore * timePassed) / gameManager.CardScoreBonusTime);
         GameManager.score += (gameManager.CardScore * timePassed) / gameManager.CardScoreBonusTime;
         Debug.Log($"Add {(gameManager.CardScore * timePassed) / gameManager.CardScoreBonusTime} point");
     }
