@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6971050586660120556}
   - component: {fileID: 7923870057931059300}
+  - component: {fileID: 8231863683974818029}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (7)
   m_TagString: Untagged
@@ -252,6 +253,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8231863683974818029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670402144987911825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &953989962323141784
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167801055684458396}
+  - component: {fileID: 893887029132397131}
   m_Layer: 0
   m_Name: F_1_02 2
   m_TagString: Untagged
@@ -457,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 1163108456647051224}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.08, y: -13.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -477,6 +492,23 @@ Transform:
   - {fileID: 6749862185267430757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893887029132397131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163108456647051224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32212b808f546947ac9abe34f63b979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keysRenderer:
+  - {fileID: 7508744592118311175}
+  - {fileID: 7283236014276419156}
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
+  gameEvents: {fileID: 11400000, guid: eed9d133e6b452940a12b082e30f94b5, type: 2}
 --- !u!1 &1206001679270162843
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2292239666210021959}
   - component: {fileID: 6453434968823955079}
+  - component: {fileID: 5363286671307909103}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (5)
   m_TagString: Untagged
@@ -884,6 +917,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5363286671307909103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829757242913207052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &1884493061258099104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6748875906394414570}
   - component: {fileID: 713298025943942856}
+  - component: {fileID: 7508744592118311175}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (1)
   m_TagString: Untagged
@@ -1366,6 +1413,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7508744592118311175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118289321209207713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e65e04d5440f64da4f45bc9a30da3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2362121868761554195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2647031792516546257}
   - component: {fileID: 8390427165695957511}
+  - component: {fileID: 8229520958465947151}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (4)
   m_TagString: Untagged
@@ -2233,6 +2293,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8229520958465947151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501637732499522688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &3677127035287403745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,6 +2316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2573999240607230434}
   - component: {fileID: 8769206989820575208}
+  - component: {fileID: 8139801423525904092}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique
   m_TagString: Untagged
@@ -2317,6 +2391,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8139801423525904092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677127035287403745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &4200359380778027579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2321553442790543996}
   - component: {fileID: 2888180694366471827}
+  - component: {fileID: 8942278658074788941}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (8)
   m_TagString: Untagged
@@ -2737,6 +2825,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8942278658074788941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672068314916864593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &4886246391980196902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +3054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3636201107853254314}
   - component: {fileID: 5336473422037941294}
+  - component: {fileID: 2097194560354627919}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (3)
   m_TagString: Untagged
@@ -3027,6 +3129,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2097194560354627919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6286775442522649638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &6558289804051462379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,6 +3183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5117344635006989985}
   - component: {fileID: 7070675338905349294}
+  - component: {fileID: 7283236014276419156}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (2)
   m_TagString: Untagged
@@ -3142,6 +3258,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7283236014276419156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697584509448304423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e65e04d5440f64da4f45bc9a30da3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7153135844171511889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,6 +3749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2759499333988799886}
   - component: {fileID: 6341531722731607521}
+  - component: {fileID: 3762206192360331518}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique (6)
   m_TagString: Untagged
@@ -3695,6 +3824,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3762206192360331518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297449526860702299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e56fe7dd65e8949916fd9c9eff4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
 --- !u!1 &8487193632586056929
 GameObject:
   m_ObjectHideFlags: 0

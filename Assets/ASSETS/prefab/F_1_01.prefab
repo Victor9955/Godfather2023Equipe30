@@ -357,6 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167801055684458396}
+  - component: {fileID: 5246559202678013387}
   m_Layer: 0
   m_Name: F_1_01
   m_TagString: Untagged
@@ -373,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 1163108456647051224}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.08, y: -13.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -395,6 +396,22 @@ Transform:
   - {fileID: 568000185419631942}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5246559202678013387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163108456647051224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32212b808f546947ac9abe34f63b979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keysRenderer:
+  - {fileID: 5448790211788890025}
+  bind: {fileID: 11400000, guid: b27c282f73717284b819acf01c3443df, type: 2}
+  gameEvents: {fileID: 11400000, guid: eed9d133e6b452940a12b082e30f94b5, type: 2}
 --- !u!1 &1206001679270162843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2573999240607230434}
   - component: {fileID: 8769206989820575208}
+  - component: {fileID: 5448790211788890025}
   m_Layer: 0
   m_Name: Pictogrammes_L24_Musique
   m_TagString: Untagged
@@ -1764,6 +1782,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5448790211788890025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677127035287403745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e65e04d5440f64da4f45bc9a30da3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3807083565618775581
 GameObject:
   m_ObjectHideFlags: 0

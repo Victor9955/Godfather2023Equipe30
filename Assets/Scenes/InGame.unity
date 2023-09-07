@@ -1305,9 +1305,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 906502100}
     - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
       propertyPath: forms.Array.data[0]
       value: 
-      objectReference: {fileID: 1224915120752087505, guid: d27239eab303ce141b0c993467385886, type: 3}
+      objectReference: {fileID: 1163108456647051224, guid: 45b56c7e11700844eb17a3242ece65e3, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[1]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: b8c6d6bc941d4db40a27d5503247b7e0, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[2]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: 98b620235a989d240b14fc6d7a7a1433, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[3]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: 38075b0682b183f46933a1ca3087d0d7, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[4]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: 044d47aaf35b8334286eab67b9708f1f, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[5]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: a8163013546965c4d827e400853345a7, type: 3}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[6]
+      value: 
+      objectReference: {fileID: 1163108456647051224, guid: 7cc28b1cda5bf664f9724b92be0b8b64, type: 3}
     - target: {fileID: 7890378486588814463, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
       propertyPath: m_Name
       value: Card Spawner
