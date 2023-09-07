@@ -15,5 +15,16 @@ public class Key : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
         Debug.Log(key.keyCode.ToString());
         spr.sprite = key.sprite;
+        spr.enabled = false;
+    }
+
+    public void Show()
+    {
+        spr.enabled = true;
+    }
+
+    public void Hide() 
+    { 
+        spr.enabled = false;
     }
 }

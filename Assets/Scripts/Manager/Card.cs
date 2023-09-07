@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,7 +18,7 @@ public class Card : MonoBehaviour
     {
         List<KeyBinding> random = bind.bindings.OrderBy(x => Random.value).ToList();
 
-        for (int i = 0; i < keys.Count - 1; i++)
+        for (int i = 0; i < keys.Count; i++)
         {
             keys[i].key = random[i];
         }
@@ -43,7 +44,15 @@ public class Card : MonoBehaviour
     {
         if (Input.GetKeyDown(testingKeys.Peek()))
         {
+            foreach (var item in keys)
+            {
+                if (item.key.keyCode == testingKeys.Peek())
+                {
+                    item.Show();
+                }
+            }
             testingKeys.Dequeue();
+            
             Debug.Log("Good");
         }
         else
@@ -52,6 +61,7 @@ public class Card : MonoBehaviour
             foreach (Key item in keys)
             {
                 testingKeys.Enqueue(item.key.keyCode);
+                item.Hide();
             }
             Debug.Log("Retry");
         }
