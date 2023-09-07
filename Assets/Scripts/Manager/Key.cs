@@ -7,24 +7,12 @@ using UnityEngine.UI;
 [Serializable]
 public class Key : MonoBehaviour
 {
-    public KeyBinding key;
     SpriteRenderer spr;
 
-    public void Init()
+    public void Init(KeyBinding initKey)
     {
         spr = GetComponent<SpriteRenderer>();
-        Debug.Log(key.keyCode.ToString());
-        spr.sprite = key.sprite;
-        spr.enabled = false;
-    }
-
-    public void Show()
-    {
         spr.enabled = true;
-    }
-
-    public void Hide() 
-    { 
-        spr.enabled = false;
+        spr.sprite = initKey.sprite;
     }
 }
