@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: posForm
       value: 
       objectReference: {fileID: 2065356168}
+    - target: {fileID: 4105677726084113935, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
+      propertyPath: forms.Array.data[0]
+      value: 
+      objectReference: {fileID: 4264024539607814512, guid: f178d3a5c03225647a97b1329ee59325, type: 3}
     - target: {fileID: 7890378486588814463, guid: 77a5b0e412e2db448a60f607dd00bbd0, type: 3}
       propertyPath: m_Name
       value: Card Spawner
