@@ -13,12 +13,22 @@ public class CardSpawner : MonoBehaviour
     GameObject current = null;
     int last = -1;
 
+    public static CardSpawner instance;
+
+    private void Start()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     [Button]
-    void SpawnCard()
+    public void SpawnCard()
     {
         current = Instantiate(forms[GetRandom()], posForm);
         Card card = current.GetComponent<Card>();
         card.Init();
+
+        CardSpawnerManager.instance.TimePassed = GameManager.Instance.CardScoreBonusTime;
     }
 
     [Button]

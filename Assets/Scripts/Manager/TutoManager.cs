@@ -18,6 +18,7 @@ public class TutoManager : MonoBehaviour
     public void StartTuto()
     {
         TutoPanel.SetActive(true);
+        //CardSpawner.instance.SpawnCard();
     }
 
     public void CloseTuto()

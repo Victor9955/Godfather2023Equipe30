@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Manager")]
     [SerializeField] private TutoManager tutoManager; // Nsm l'instance marche pas je sais pas pourquoi
 
-    [Header("Variable")]
+    [Header("Variable changeable")]
     public static int score;
     [SerializeField][Range(0, 20)] private int timeBtwCard;
     public int TimeBtwCard => timeBtwCard;
@@ -24,8 +25,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int maxCardStock;
     public int MaxCardStock => maxCardStock;
-
-
+    [SerializeField] private int cardInStock;
+    public int CardInStock
+    {
+        get { return cardInStock; }
+        set { cardInStock = value; }
+    }
 
     public enum gameStateList
     {
@@ -59,6 +64,7 @@ public class GameManager : MonoBehaviour
                 tutoManager.StartTuto();
                 return;
             case gameStateList.Ig:
+                CardSpawnerManager.instance.StartGame();
                 return;
             case gameStateList.EndMenu:
                 SceneManager.LoadScene("GameOverMenu");

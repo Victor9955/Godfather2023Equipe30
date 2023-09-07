@@ -17,15 +17,29 @@ public class Card : MonoBehaviour
 
     public void Init()
     {
+        gameEvents.WinCard += Win;
+
         gameEvents.Init(keysRenderer.Count);
         keys.Clear();
         keys.AddRange(gameEvents.keys);
 
-        Debug.Log(keysRenderer.Count);
+        //Debug.Log(keysRenderer.Count);
 
         for (int i = 0; i < keysRenderer.Count; i++)
         {
             keysRenderer[i].Init(keys[i]);
         }
+    }
+
+    private void Win()
+    {
+        CardSpawnerManager.instance.AddPoint();
+        CardSpawnerManager.instance.RespawnCard();
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        gameEvents.WinCard -= Win;
     }
 }

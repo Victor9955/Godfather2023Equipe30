@@ -61,9 +61,3 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 49c29789b3430864ba53c4d283026aa9, type: 3}
   - keyCode: 59
     sprite: {fileID: 21300000, guid: 936b2bda94ca8f749b90c2114fdd1831, type: 3}
-  - keyCode: 276
-    sprite: {fileID: 0}
-  - keyCode: 275
-    sprite: {fileID: 0}
-  - keyCode: 13
-    sprite: {fileID: 0}
