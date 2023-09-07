@@ -31,7 +31,7 @@ public class Display : MonoBehaviour
             item.SetActive(false);
         }
 
-        for (int i = 0; i < keys.Count - 1; i++)
+        for (int i = 0; i < keys.Count; i++)
         {
             showKeysGrid[i].SetActive(true);
         }
@@ -50,6 +50,7 @@ public class Display : MonoBehaviour
             yield return null;
         }
 
+        gameEvents.WinCardInvoke();
         Debug.Log("WinCard");
     }
 
@@ -68,6 +69,11 @@ public class Display : MonoBehaviour
                 item.GetComponent<SpriteRenderer>().sprite = gameEvents.resetSprite;
             }
             testingKeys.Clear();
+            foreach (var item in keys)
+            {
+                testingKeys.Enqueue(item);
+            }
+            gameEvents.WrongInputInvoke();
             Debug.Log("Retry");
         }
     }

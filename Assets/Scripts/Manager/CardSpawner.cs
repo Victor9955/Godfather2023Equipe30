@@ -19,8 +19,6 @@ public class CardSpawner : MonoBehaviour
         current = Instantiate(forms[GetRandom()], posForm);
         Card card = current.GetComponent<Card>();
         card.Init();
-        //read.Show(card.keys);
-        //card.Begin();
     }
 
     [Button]

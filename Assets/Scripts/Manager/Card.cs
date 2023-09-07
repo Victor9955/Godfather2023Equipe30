@@ -17,11 +17,13 @@ public class Card : MonoBehaviour
 
     public void Init()
     {
-        gameEvents.Init(keys.Count);
+        gameEvents.Init(keysRenderer.Count);
         keys.Clear();
         keys.AddRange(gameEvents.keys);
 
-        for (int i = 0; i < keysRenderer.Count - 1; i++)
+        Debug.Log(keysRenderer.Count);
+
+        for (int i = 0; i < keysRenderer.Count; i++)
         {
             keysRenderer[i].Init(keys[i]);
         }

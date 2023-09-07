@@ -14,7 +14,7 @@ public class GameEventHandler : ScriptableObject
     public event Action InitCard;
 
     public event Action WrongInput;
-    public event Action RightInput;
+    public event Action WinCard;
 
     public Sprite resetSprite;
 
@@ -38,5 +38,15 @@ public class GameEventHandler : ScriptableObject
             keys[i] = random[i];
         }
         InitCard?.Invoke();
+    }
+
+    public void WinCardInvoke()
+    {
+        WinCard?.Invoke();
+    }
+
+    public void WrongInputInvoke()
+    {
+        WrongInput?.Invoke();
     }
 }
