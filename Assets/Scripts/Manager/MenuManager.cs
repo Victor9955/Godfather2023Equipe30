@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
         validate.performed += Validate;
 
         UpdateUI(0, 0);
+        GameManager.GameState = GameManager.gameStateList.MainMenu;
     }
 
     public void Left(InputAction.CallbackContext ctx) //Unity Input Call
@@ -62,7 +63,6 @@ public class MenuManager : MonoBehaviour
 
             UpdateUI(_previousActive, buttonSelected);
         }
-        
     }
 
     public void Validate(InputAction.CallbackContext ctx) //Unity Input Call
@@ -84,8 +84,6 @@ public class MenuManager : MonoBehaviour
         }
         else
             HideCredit();
-
-
     }
 
     private void UpdateUI(int _lastActiveButton, int _newActiveButton)
@@ -97,7 +95,8 @@ public class MenuManager : MonoBehaviour
     void StartGame()
     {
         Debug.Log("Start Game");
-        SceneManager.LoadScene("MOCKUPGD uwu");
+        GameManager.GameState = GameManager.gameStateList.IgTuto;
+        SceneManager.LoadScene("InGame");
     }
 
     void Quit()
@@ -123,7 +122,6 @@ public class MenuManager : MonoBehaviour
 
     void HideCredit()
     {
-        Debug.Log("HIDE CREDIT");
         inCredit = false;
 
         if (creditPanel != null)
