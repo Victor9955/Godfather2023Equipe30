@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
         switch (GameState)
         {
             case gameStateList.MainMenu:
-                SceneManager.LoadScene("InGame");
                 return;
             case gameStateList.IgTuto:
                 tutoManager.StartTuto();
