@@ -57,7 +57,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 04cc7b07864acb24582be651f2a8108a, type: 3}
   - keyCode: 110
     sprite: {fileID: 21300000, guid: 9a34d73585cbfd741b309cf1c8870d55, type: 3}
-  - keyCode: 44
+  - keyCode: 112
     sprite: {fileID: 21300000, guid: 49c29789b3430864ba53c4d283026aa9, type: 3}
-  - keyCode: 59
+  - keyCode: 109
     sprite: {fileID: 21300000, guid: 936b2bda94ca8f749b90c2114fdd1831, type: 3}

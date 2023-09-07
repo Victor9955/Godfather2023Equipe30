@@ -50,6 +50,11 @@ public class Display : MonoBehaviour
             yield return null;
         }
 
+        ResetSprites();
+        foreach (var item in showKeysGrid)
+        {
+            item.SetActive(false);
+        }
         gameEvents.WinCardInvoke();
         Debug.Log("WinCard");
     }
@@ -64,10 +69,7 @@ public class Display : MonoBehaviour
         }
         else
         {
-            foreach (var item in showKeysGrid)
-            {
-                item.GetComponent<SpriteRenderer>().sprite = gameEvents.resetSprite;
-            }
+            ResetSprites();
             testingKeys.Clear();
             foreach (var item in keys)
             {
@@ -81,5 +83,13 @@ public class Display : MonoBehaviour
     void Begin()
     {
         StartCoroutine(WaitForKey());
+    }
+
+    void ResetSprites()
+    {
+        foreach (var item in showKeysGrid)
+        {
+            item.GetComponent<SpriteRenderer>().sprite = gameEvents.resetSprite;
+        }
     }
 }
