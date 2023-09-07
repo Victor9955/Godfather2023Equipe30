@@ -10,74 +10,20 @@ using static UnityEngine.InputManagerEntry;
 
 public class Card : MonoBehaviour
 {
-    public List<Key> keys;
-    Queue<KeyCode> testingKeys = new Queue<KeyCode>();
+    [SerializeField] List<Key> keysRenderer;
+    List<KeyBinding> keys = new List<KeyBinding>();
     [SerializeField] PictoBinding bind;
-    
+    [SerializeField] GameEventHandler gameEvents;
+
     public void Init()
     {
-        List<KeyBinding> random = bind.bindings.OrderBy(x => Random.value).ToList();
+        gameEvents.Init(keys.Count);
+        keys.Clear();
+        keys.AddRange(gameEvents.keys);
 
-        for (int i = 0; i < keys.Count; i++)
+        for (int i = 0; i < keysRenderer.Count - 1; i++)
         {
-            keys[i].key = random[i];
+            keysRenderer[i].Init(keys[i]);
         }
-
-        foreach (var item in keys)
-        {
-            item.Init();
-        }
-
-        testingKeys.Clear();
-        foreach (Key item in keys)
-        {
-            testingKeys.Enqueue(item.key.keyCode);
-        }
-    }
-
-    public void Begin()
-    {
-        StartCoroutine(WaitForKey());
-    }
-
-    void TestKey()
-    {
-        if (Input.GetKeyDown(testingKeys.Peek()))
-        {
-            foreach (var item in keys)
-            {
-                if (item.key.keyCode == testingKeys.Peek())
-                {
-                    item.Show();
-                }
-            }
-            testingKeys.Dequeue();
-            
-            Debug.Log("Good");
-        }
-        else
-        {
-            testingKeys.Clear();
-            foreach (Key item in keys)
-            {
-                testingKeys.Enqueue(item.key.keyCode);
-                item.Hide();
-            }
-            Debug.Log("Retry");
-        }
-    }
-
-    IEnumerator WaitForKey()
-    {
-        while (testingKeys.Count > 0)
-        {
-            if (Input.anyKeyDown)
-            {
-                TestKey();
-            }
-            yield return null;
-        }
-
-        Debug.Log("WinCard");
     }
 }
