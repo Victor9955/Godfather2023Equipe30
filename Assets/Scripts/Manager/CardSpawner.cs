@@ -9,7 +9,6 @@ public class CardSpawner : MonoBehaviour
 
     [SerializeField] List<GameObject> forms;
     [SerializeField] Transform posForm;
-    [SerializeField] ReadKey read;
 
     GameObject current = null;
     int last = -1;
@@ -20,8 +19,6 @@ public class CardSpawner : MonoBehaviour
         current = Instantiate(forms[GetRandom()], posForm);
         Card card = current.GetComponent<Card>();
         card.Init();
-        read.Show(card.keys);
-        card.Begin();
     }
 
     [Button]
