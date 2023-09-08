@@ -92,14 +92,14 @@ public class CardSpawnerManager : MonoBehaviour
     public void RespawnCard()
     {
         Debug.Log("RESPAWN A CARD WHEN FINISHED");  
-        StartCoroutine(RespawnCardAfterTimer());
-    }
+        cardStock[0].transform.DOMoveY(-6, 1.0f).OnComplete(() =>
+        {
+            Destroy(cardStock[0]);
+            cardStock.RemoveAt(0);
+            gameManager.CardInStock--;
+            UpdateStockPosition();
+            CardSpawner.instance.SpawnCard();
 
-    IEnumerator RespawnCardAfterTimer()
-    {
-        yield return new WaitForSeconds(1);
-        CardSpawner.instance.SpawnCard();
-
-
+        });
     }
 }
