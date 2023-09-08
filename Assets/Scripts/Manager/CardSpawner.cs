@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using System.Linq;
+using DG.Tweening;
 
 public class CardSpawner : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class CardSpawner : MonoBehaviour
         current = Instantiate(forms[GetRandom()], posForm);
         Card card = current.GetComponent<Card>();
         card.Init();
+
+        current.transform.DOMoveY(current.transform.position.y + 5, 1.0f);
 
         CardSpawnerManager.instance.TimePassed = GameManager.Instance.CardScoreBonusTime;
     }
