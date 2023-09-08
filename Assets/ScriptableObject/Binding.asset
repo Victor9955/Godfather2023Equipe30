@@ -14,50 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bindings:
   - keyCode: 113
-    sprite: {fileID: 21300000, guid: 540ad111cc0bd524da3ff4291949f0c2, type: 3}
+    sprite: {fileID: 21300000, guid: 84866f24878880f4fba9a07710b10251, type: 3}
   - keyCode: 119
-    sprite: {fileID: 21300000, guid: d3263a6519a34ab47bb70f96b42082c4, type: 3}
+    sprite: {fileID: 21300000, guid: 75e7f960ffb738c4eaf0b39b4658a80a, type: 3}
   - keyCode: 101
-    sprite: {fileID: 21300000, guid: d9861450a0736d841996c2ec965167c9, type: 3}
+    sprite: {fileID: 21300000, guid: 649bfe421b040104082dbc8e9ba387fb, type: 3}
   - keyCode: 114
-    sprite: {fileID: 21300000, guid: 743affa1153bd304cbd7a3e7ff07c7fe, type: 3}
+    sprite: {fileID: 21300000, guid: 7a99fbbbd4914b744849f218ef80f28b, type: 3}
   - keyCode: 116
-    sprite: {fileID: 21300000, guid: c618f2222fe56054eb2d8d6fce7d6c8b, type: 3}
+    sprite: {fileID: 21300000, guid: c905d9ea3f6c47041abc909994020d49, type: 3}
   - keyCode: 121
-    sprite: {fileID: 21300000, guid: 8f3ab9294f4806a4497c4c2523ba55e1, type: 3}
+    sprite: {fileID: 21300000, guid: 54ba06394d709b84f845d69a34268b6b, type: 3}
   - keyCode: 117
-    sprite: {fileID: 21300000, guid: 4e16864d716eae34eb5c2e40e0c08e20, type: 3}
+    sprite: {fileID: 21300000, guid: 4fec0956d48417341826a56b9cc95de6, type: 3}
   - keyCode: 105
-    sprite: {fileID: 21300000, guid: 6c07793db48f6a94aa822370ef23beb0, type: 3}
+    sprite: {fileID: 21300000, guid: 154060ef3abdb0640ab0795efcbc2d0a, type: 3}
   - keyCode: 97
-    sprite: {fileID: 21300000, guid: a6594d340c0f5ec46accaf177c9042dd, type: 3}
+    sprite: {fileID: 21300000, guid: 3ea71cd30d030284c867f7ad45c65bf5, type: 3}
   - keyCode: 115
-    sprite: {fileID: 21300000, guid: 31c532af73cc37c418e2fd4640b80c58, type: 3}
+    sprite: {fileID: 21300000, guid: 2e49e47c81aa62d4ea5bda9762a28a15, type: 3}
   - keyCode: 100
-    sprite: {fileID: 21300000, guid: aab0fda4b382ef9448ed37e4060c5bd4, type: 3}
+    sprite: {fileID: 21300000, guid: 57b3c4a62f7d506469ada8193fc704c8, type: 3}
   - keyCode: 102
-    sprite: {fileID: 21300000, guid: a33e0fd9bb48b9740a7f3e5ddb3a4937, type: 3}
+    sprite: {fileID: 21300000, guid: ad52f0acd4b005b4d893de66897f8901, type: 3}
   - keyCode: 103
-    sprite: {fileID: 21300000, guid: 1307448b4ed8593459d44dd381bbb60a, type: 3}
+    sprite: {fileID: 21300000, guid: 09cb38d790daf7441b4b1ee078990e0e, type: 3}
   - keyCode: 104
-    sprite: {fileID: 21300000, guid: 1c8c249d687d7db4d90bcf9230174612, type: 3}
+    sprite: {fileID: 21300000, guid: 6c9c15ff47e54634aac61462f731666b, type: 3}
   - keyCode: 106
-    sprite: {fileID: 21300000, guid: f8a2259c458165345b72adec8b262ae6, type: 3}
+    sprite: {fileID: 21300000, guid: ebd4f8b79e0718e44b2fb46fca850f24, type: 3}
   - keyCode: 107
-    sprite: {fileID: 21300000, guid: 0881939de64943442bdf3284ea256213, type: 3}
+    sprite: {fileID: 21300000, guid: 66fa63756bdd7514f837b7e8312a262d, type: 3}
   - keyCode: 122
-    sprite: {fileID: 21300000, guid: 7728de4de3378d840b357835a55c8c01, type: 3}
+    sprite: {fileID: 21300000, guid: 2b62d2426d8c8c945a30718f91a27d04, type: 3}
   - keyCode: 120
-    sprite: {fileID: 21300000, guid: 31c19f8df5287754db2018c7a9b7406b, type: 3}
+    sprite: {fileID: 21300000, guid: 9ae03e7144e4a984c8576f50e93384a9, type: 3}
   - keyCode: 99
-    sprite: {fileID: 21300000, guid: 851ab074bdba8bb4da34005bcb9ecb1f, type: 3}
+    sprite: {fileID: 21300000, guid: 6ebcbe868f8f4a9449da97265636fc9f, type: 3}
   - keyCode: 118
-    sprite: {fileID: 21300000, guid: 0eff75a4812cc9144a5c41874eb859e2, type: 3}
+    sprite: {fileID: 21300000, guid: ecfdac4233ad9bd4c802522a89d88d04, type: 3}
   - keyCode: 98
-    sprite: {fileID: 21300000, guid: 04cc7b07864acb24582be651f2a8108a, type: 3}
+    sprite: {fileID: 21300000, guid: d46ddad7d98ca3f43a9f4fb95597963c, type: 3}
   - keyCode: 110
-    sprite: {fileID: 21300000, guid: 9a34d73585cbfd741b309cf1c8870d55, type: 3}
+    sprite: {fileID: 21300000, guid: d522e4dff5dc6744791520023f83d562, type: 3}
+  - keyCode: 111
+    sprite: {fileID: 21300000, guid: b0f745703c4f9eb4c87a33a8e8590580, type: 3}
   - keyCode: 112
-    sprite: {fileID: 21300000, guid: 49c29789b3430864ba53c4d283026aa9, type: 3}
-  - keyCode: 109
-    sprite: {fileID: 21300000, guid: 936b2bda94ca8f749b90c2114fdd1831, type: 3}
+    sprite: {fileID: 21300000, guid: 68795a16aa609af439711b56c2133b2e, type: 3}
