@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
-using static UnityEngine.InputManagerEntry;
+//using static UnityEngine.InputManagerEntry;
 
 public class Card : MonoBehaviour
 {
