@@ -50,7 +50,6 @@ public class TutoManager : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         TutoPanels[2].SetActive(false);
-        TutoPanels[3].SetActive(true);
 
         CloseTuto();
     }

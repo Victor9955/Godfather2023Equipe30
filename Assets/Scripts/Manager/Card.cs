@@ -42,4 +42,9 @@ public class Card : MonoBehaviour
     {
         gameEvents.WinCard -= Win;
     }
+
+    public List<Key> GetKeys()
+    {
+        return keysRenderer;
+    }
 }
