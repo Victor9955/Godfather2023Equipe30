@@ -3545,10 +3545,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutoManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4924141759509336941, guid: 200c2d31db3076349be1153d9a52b165, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

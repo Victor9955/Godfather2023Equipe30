@@ -12,7 +12,7 @@ public class CardSpawnerManager : MonoBehaviour
     private GameManager gameManager;
     [SerializeField] private ScoreSystem score;
     [SerializeField] private List<GameObject> blankCardZone;
-    [SerializeField] private GameObject[] cardStock;
+    [SerializeField] private List<GameObject> cardStock;
 
     [SerializeField] private GameObject card;
     [SerializeField] private GameObject newCardSpawner;
@@ -34,8 +34,6 @@ public class CardSpawnerManager : MonoBehaviour
             instance = this;
 
         timePassed = gameManager.CardScoreBonusTime;
-
-        cardStock = new GameObject[gameManager.MaxCardStock];
     }
 
     public void StartGame()
@@ -52,9 +50,9 @@ public class CardSpawnerManager : MonoBehaviour
         //Spawn & Setup the card
         if (gameManager.CardInStock < gameManager.MaxCardStock)
         {
-            gameManager.CardInStock++;
             GameObject _newCard = Instantiate(card, newCardSpawner.transform.position, Quaternion.identity);
-            cardStock[gameManager.CardInStock] = _newCard;
+            cardStock.Add(_newCard);
+            gameManager.CardInStock++;
             UpdateStockPosition();
             
         }
@@ -68,7 +66,7 @@ public class CardSpawnerManager : MonoBehaviour
 
     private void UpdateStockPosition()
     {
-        for (int i = 0; i < cardStock.Length; i++) 
+        for (int i = 0; i < gameManager.CardInStock; i++) 
         {
             Vector3 _pos = blankCardZone[i].transform.position;
             cardStock[i].transform.DOMove(_pos, 1.0f);
@@ -101,5 +99,7 @@ public class CardSpawnerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         CardSpawner.instance.SpawnCard();
+
+
     }
 }
