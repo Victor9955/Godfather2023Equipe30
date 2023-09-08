@@ -69,7 +69,7 @@ public class GameOverManager : MonoBehaviour
 
     void ReStartGame()
     {
-        GameManager.GameState = GameManager.gameStateList.IgTuto;
+        GameManager.GameState = GameManager.gameStateList.Ig;
         SceneManager.LoadScene("InGame");
     }
 

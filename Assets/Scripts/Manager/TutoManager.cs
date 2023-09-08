@@ -8,7 +8,7 @@ public class TutoManager : MonoBehaviour
 {
     [SerializeField] private GameObject tutoCard;
 
-    [SerializeField] private GameObject[] TutoPanels;
+    public GameObject[] TutoPanels;
 
 
     public static TutoManager Instance;
@@ -37,19 +37,24 @@ public class TutoManager : MonoBehaviour
     {
         TutoPanels[0].SetActive(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
         TutoPanels[0].SetActive(false);
         TutoPanels[1].SetActive(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
         TutoPanels[1].SetActive(false);
         TutoPanels[2].SetActive(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
         TutoPanels[2].SetActive(false);
+        TutoPanels[3].SetActive(true);
+
+        yield return new WaitForSeconds(3);
+
+        TutoPanels[3].SetActive(false);
 
         CloseTuto();
     }
