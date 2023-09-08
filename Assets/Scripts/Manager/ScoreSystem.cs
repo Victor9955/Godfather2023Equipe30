@@ -13,7 +13,7 @@ public class ScoreSystem : MonoBehaviour
     {
         textScoreParticle.text = addScore.ToString();
         particles.Play();
-        tmpro.text = "Score : " + (score + addScore).ToString();
+        tmpro.text = (score + addScore).ToString();
     }
 
     [Button]
