@@ -1,5 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -7,7 +10,12 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CardSpawnerManager : MonoBehaviour
 {
     private GameManager gameManager;
-    [SerializeField] ScoreSystem score;
+    [SerializeField] private ScoreSystem score;
+    [SerializeField] private List<GameObject> blankCardZone;
+    [SerializeField] private List<GameObject> cardStock;
+
+    [SerializeField] private GameObject card;
+    [SerializeField] private GameObject newCardSpawner;
 
     private int timePassed;
     public int TimePassed
@@ -32,19 +40,36 @@ public class CardSpawnerManager : MonoBehaviour
     {
         Debug.Log("START GAME");
         InvokeRepeating("TimeBonus", 0f, 1.0f);
+        InvokeRepeating("AddStorageCard", 0f, gameManager.TimeBtwCard);
         CardSpawner.instance.SpawnCard();
     }
 
     public void AddStorageCard()
     {
+        Debug.Log("Add Storage");
         //Spawn & Setup the card
         if (gameManager.CardInStock < gameManager.MaxCardStock)
+        {
+            GameObject _newCard = Instantiate(card, newCardSpawner.transform.position, Quaternion.identity);
+            cardStock.Add(_newCard);
             gameManager.CardInStock++;
+            UpdateStockPosition();
+            
+        }
         else//Game Over
         {
             Debug.Log("T'ES VIR2 GROS RATIO DANS TA MAMA");
             GameManager.GameState = GameManager.gameStateList.EndMenu;
             gameManager.UpdateStateEvent();
+        }
+    }
+
+    private void UpdateStockPosition()
+    {
+        for (int i = 0; i < gameManager.CardInStock; i++) 
+        {
+            Vector3 _pos = blankCardZone[i].transform.position;
+            cardStock[i].transform.DOMove(_pos, 1.0f);
         }
     }
 
@@ -74,5 +99,7 @@ public class CardSpawnerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         CardSpawner.instance.SpawnCard();
+
+
     }
 }
