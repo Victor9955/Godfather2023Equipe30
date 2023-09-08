@@ -95,4 +95,9 @@ public class Display : MonoBehaviour
             item.GetComponent<SpriteRenderer>().sprite = gameEvents.resetSprite;
         }
     }
+
+    private void OnDestroy()
+    {
+        gameEvents.InitCard -= OnInit;
+    }
 }

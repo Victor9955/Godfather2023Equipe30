@@ -517,6 +517,8 @@ Transform:
   - {fileID: 1156340787}
   - {fileID: 318215265}
   - {fileID: 1488052108}
+  - {fileID: 1896480990}
+  - {fileID: 513587150}
   - {fileID: 1090263761}
   - {fileID: 1778652830}
   - {fileID: 2011765858}
@@ -1601,6 +1603,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e105e90a16136847be719cfa9e8abc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &513587149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513587150}
+  m_Layer: 0
+  m_Name: AnimBigBossPosReset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &513587150
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513587149}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.8392308}
+  m_LocalScale: {x: 0.74723613, y: 0.74723613, z: 0.74723613}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 214482233}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.84, y: -10.17}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &537240066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2834,7 @@ GameObject:
   - component: {fileID: 1488052108}
   - component: {fileID: 1488052110}
   - component: {fileID: 1488052109}
+  - component: {fileID: 1488052111}
   m_Layer: 0
   m_Name: BigBoss
   m_TagString: Untagged
@@ -2820,7 +2858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.84, y: -0.69}
+  m_AnchoredPosition: {x: -4.84, y: -9.96}
   m_SizeDelta: {x: 1080, y: 1078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1488052109
@@ -2883,6 +2921,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488052107}
   m_CullTransparentMesh: 1
+--- !u!114 &1488052111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488052107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32b406c53c7af64d921b2be0df6fdb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamesEvents: {fileID: 11400000, guid: eed9d133e6b452940a12b082e30f94b5, type: 2}
+  resetPos: {fileID: 513587150}
+  losePos: {fileID: 1896480990}
 --- !u!1 &1508839478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,6 +3317,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833906031}
   m_CullTransparentMesh: 1
+--- !u!1 &1896480989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896480990}
+  m_Layer: 0
+  m_Name: AnimBigBossPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1896480990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896480989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.8392308}
+  m_LocalScale: {x: 0.74723613, y: 0.74723613, z: 0.74723613}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 214482233}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.84, y: -0.69}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1997973792 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3133641077287704728, guid: 1d8a2878e25138e4dbf76a5df1255d07, type: 3}
@@ -3280,6 +3368,7 @@ GameObject:
   - component: {fileID: 2011765858}
   - component: {fileID: 2011765860}
   - component: {fileID: 2011765859}
+  - component: {fileID: 2011765861}
   m_Layer: 0
   m_Name: Collegue
   m_TagString: Untagged
@@ -3303,7 +3392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 6.57, y: -0.99}
+  m_AnchoredPosition: {x: 6.09, y: -1.02}
   m_SizeDelta: {x: 1261, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2011765859
@@ -3346,7 +3435,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 3fb0fcb235b7cea45af442fa1398717a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3366,6 +3455,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011765857}
   m_CullTransparentMesh: 1
+--- !u!114 &2011765861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011765857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51449fd3cdbac6c45af991b2ba8a6ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamesEvents: {fileID: 11400000, guid: eed9d133e6b452940a12b082e30f94b5, type: 2}
+  resetSprite: {fileID: 21300000, guid: 3fb0fcb235b7cea45af442fa1398717a, type: 3}
+  firstFrame: {fileID: 21300000, guid: 8cf7b1f198447934da8df2d93f347995, type: 3}
+  secondFrame: {fileID: 21300000, guid: 5fda6dccb4d7e054a85ad0a403294b85, type: 3}
 --- !u!1 &2015222310
 GameObject:
   m_ObjectHideFlags: 0
