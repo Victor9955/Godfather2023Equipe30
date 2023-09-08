@@ -1,16 +1,9 @@
-using NaughtyAttributes;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
-using static UnityEngine.InputManagerEntry;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField] List<Key> keysRenderer;
+    public List<Key> keysRenderer;
     List<KeyBinding> keys = new List<KeyBinding>();
     [SerializeField] PictoBinding bind;
     [SerializeField] GameEventHandler gameEvents;
