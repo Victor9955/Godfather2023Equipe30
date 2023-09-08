@@ -6,6 +6,7 @@ public class Display : MonoBehaviour
 {
     [SerializeField] GameEventHandler gameEvents;
     [SerializeField] GameObject[] showKeysGrid;
+    [SerializeField] float waitTime = 1f;
 
 
     List<KeyBinding> keys = new List<KeyBinding>();
@@ -55,6 +56,8 @@ public class Display : MonoBehaviour
         {
             item.SetActive(false);
         }
+        gameEvents.FXWinCardInvoke();
+        yield return new WaitForSeconds(waitTime);
         gameEvents.WinCardInvoke();
         //Debug.Log("WinCard");
     }

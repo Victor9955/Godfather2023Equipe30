@@ -15,6 +15,7 @@ public class GameEventHandler : ScriptableObject
 
     public event Action WrongInput;
     public event Action WinCard;
+    public event Action FXWinCard;
 
     public Sprite resetSprite;
 
@@ -48,5 +49,10 @@ public class GameEventHandler : ScriptableObject
     public void WrongInputInvoke()
     {
         WrongInput?.Invoke();
+    }
+
+    public void FXWinCardInvoke()
+    {
+        FXWinCard?.Invoke();
     }
 }
