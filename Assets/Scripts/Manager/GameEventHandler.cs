@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.InputManagerEntry;
+//using static UnityEngine.InputManagerEntry;
 
 
 [CreateAssetMenu(fileName = "GameEvents", menuName = "ScriptableObjects/GameEvents")]

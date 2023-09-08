@@ -22,10 +22,7 @@ public class TutoManager : MonoBehaviour
 
     public void StartTuto()
     {
-        tutoCard.transform.DOLocalMoveY(5.19f, -2.37f).SetEase(Ease.OutSine).OnComplete(() =>
-        {
-            StartCoroutine(StartTutoInfos());
-        });
+        StartCoroutine(StartTutoInfos());
     }
 
     public void CloseTuto()
