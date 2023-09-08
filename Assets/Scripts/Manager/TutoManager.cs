@@ -37,17 +37,17 @@ public class TutoManager : MonoBehaviour
     {
         TutoPanels[0].SetActive(true);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         TutoPanels[0].SetActive(false);
         TutoPanels[1].SetActive(true);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         TutoPanels[1].SetActive(false);
         TutoPanels[2].SetActive(true);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         TutoPanels[2].SetActive(false);
 
